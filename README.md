@@ -56,7 +56,7 @@ Top-tier software for site safety management, hazard identification, permit-to-w
 
 Explore open-source construction safety consoles, computer vision models, and digital twin frameworks.
 
-| Project & Repo Link | GitHub Stars Badge | License | Description & Tech Stack |
+| Project & Repo Link | GitHub_Stars_Badge | License | Description & Tech Stack |
 | :--- | :--- | :--- | :--- |
 | **[OpenConstructionEstimate](https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR)** 🧮 | [![Stars](https://img.shields.io/github/stars/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR?style=social&color=white)](https://github.com/datadrivenconstruction/OpenConstructionEstimate-DDC-CWICR/stargazers) | **MIT** | Open-source multilingual construction database and AI agent integration supporting site safety cost estimation and BIM/CAD workflows. |
 | **[Construction-PPE-Detection](https://github.com/Ansarimajid/Construction-PPE-Detection)** 🦺 | [![Stars](https://img.shields.io/github/stars/Ansarimajid/Construction-PPE-Detection?style=social&color=white)](https://github.com/Ansarimajid/Construction-PPE-Detection/stargazers) | **MIT** | Computer vision pipeline for real-time Hardhat, Safety Vest, and PPE detection on construction sites using YOLOv8 and OpenCV. |
