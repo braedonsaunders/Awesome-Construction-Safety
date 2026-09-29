@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="300">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a" />
@@ -14,97 +14,82 @@
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="1" opacity="0.3"/>
     </pattern>
-
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
-    </filter>
   </defs>
 
   <style>
-    .title { font-family: 'Segoe UI', -apple-system, Roboto, sans-serif; font-weight: 800; font-size: 52px; fill: #ffffff; }
-    .subtitle { font-family: 'Segoe UI', -apple-system, Roboto, sans-serif; font-weight: 500; font-size: 22px; fill: #fbbf24; letter-spacing: 1px; }
-    .badge-text { font-family: 'Segoe UI', -apple-system, Roboto, sans-serif; font-size: 14px; font-weight: 600; fill: #cbd5e1; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 46px; fill: #ffffff; }
+    .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 20px; fill: #fbbf24; letter-spacing: 0.5px; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #cbd5e1; }
     
-    /* Subtle SVG animations */
     @keyframes pulseGlow {
-      0% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.05); }
-      100% { opacity: 0.3; transform: scale(1); }
+      0% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+      100% { opacity: 0.3; }
     }
     @keyframes floatParticle {
       0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-8px); }
       100% { transform: translateY(0px); }
     }
-    @keyframes scanline {
-      0% { transform: translateY(-300px); }
-      100% { transform: translateY(300px); }
-    }
     
-    .glow-circle { animation: pulseGlow 6s ease-in-out infinite; transform-origin: center; }
+    .glow-circle { animation: pulseGlow 4s ease-in-out infinite; }
     .floating { animation: floatParticle 4s ease-in-out infinite; }
   </style>
 
-  <!-- Background -->
+  <!-- Background Layer -->
   <rect width="1200" height="300" rx="16" fill="url(#bgGrad)" />
   <rect width="1200" height="300" rx="16" fill="url(#grid)" />
 
-  <!-- Background Dynamic Elements (Behind Text) -->
+  <!-- Background Dynamic Glowing Accents -->
   <g class="glow-circle" opacity="0.4">
-    <circle cx="1000" cy="150" r="180" fill="#f59e0b" filter="blur(60px)"/>
-    <circle cx="150" cy="80" r="120" fill="#3b82f6" filter="blur(50px)"/>
+    <circle cx="1020" cy="150" r="140" fill="#f59e0b" />
+    <circle cx="150" cy="80" r="100" fill="#3b82f6" />
   </g>
 
-  <!-- Dynamic Geometric Waves / Construction Safety Motifs (Background Layer) -->
-  <g opacity="0.15">
+  <!-- Construction Motif Waves -->
+  <g opacity="0.12">
     <path d="M -100 250 L 300 50 L 400 50 L 0 250 Z" fill="#f59e0b" />
     <path d="M 100 250 L 500 50 L 600 50 L 200 250 Z" fill="#ffffff" />
     <path d="M 300 250 L 700 50 L 800 50 L 400 250 Z" fill="#f59e0b" />
     <path d="M 500 250 L 900 50 L 1000 50 L 600 250 Z" fill="#ffffff" />
   </g>
 
-  <!-- Floating Cards (Dynamic background elements positioned to avoid title) -->
-  <g class="floating" opacity="0.25">
-    <rect x="920" y="40" width="220" height="70" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadow)" />
-    <text x="940" y="70" fill="#f59e0b" font-family="sans-serif" font-weight="bold" font-size="14">🦺 Hardhat Alert</text>
-    <text x="940" y="90" fill="#94a3b8" font-family="sans-serif" font-size="12">AI Detection Active</text>
+  <!-- Side Floating Cards (Background Layer) -->
+  <g class="floating" opacity="0.85">
+    <rect x="930" y="45" width="220" height="65" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="950" y="72" fill="#f59e0b" font-family="sans-serif" font-weight="bold" font-size="13">Hardhat Alert</text>
+    <text x="950" y="92" fill="#94a3b8" font-family="sans-serif" font-size="11">AI Detection Active</text>
 
-    <rect x="860" y="160" width="240" height="70" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadow)" />
-    <text x="880" y="190" fill="#60a5fa" font-family="sans-serif" font-weight="bold" font-size="14">📊 TRIR Safety Index</text>
-    <text x="880" y="210" fill="#94a3b8" font-family="sans-serif" font-size="12">Zero Incidents - 90 Days</text>
+    <rect x="870" y="165" width="240" height="65" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="890" y="192" fill="#60a5fa" font-family="sans-serif" font-weight="bold" font-size="13">TRIR Safety Index</text>
+    <text x="890" y="212" fill="#94a3b8" font-family="sans-serif" font-size="11">Zero Incidents - 90 Days</text>
   </g>
 
   <!-- Safety Stripe Accent Bar -->
   <rect x="60" y="50" width="8" height="200" rx="4" fill="url(#accentGrad)" />
 
-  <!-- Main Foreground Content (Always Sharp & Visible) -->
-  <g filter="url(#shadow)">
-    <!-- Helmet Icon SVG -->
-    <g transform="translate(90, 52)">
-      <path d="M 25 35 C 25 15 45 5 70 5 C 95 5 115 15 115 35 L 125 38 C 128 39 130 42 130 45 C 130 48 128 50 125 50 L 15 50 C 12 50 10 48 10 45 C 10 42 12 39 15 38 Z" fill="#f59e0b" />
-      <rect x="60" y="0" width="20" height="25" rx="3" fill="#d97706" />
-    </g>
+  <!-- Hardhat Vector Graphics -->
+  <g transform="translate(90, 55)">
+    <path d="M 20 40 C 20 15 45 5 70 5 C 95 5 120 15 120 40 L 130 43 C 133 44 135 47 135 50 C 135 53 133 55 130 55 L 10 55 C 7 55 5 53 5 50 C 5 47 7 44 10 43 Z" fill="#f59e0b" />
+    <rect x="60" y="2" width="20" height="25" rx="3" fill="#d97706" />
+  </g>
 
-    <text x="240" y="105" class="title">Awesome Construction Safety 🚧</text>
-    <text x="240" y="150" class="subtitle">Curated SaaS Platforms, EHS Software & Open-Source Tools</text>
+  <!-- Main Title & Subtitle Foreground -->
+  <text x="240" y="110" class="title">Awesome Construction Safety</text>
+  <text x="240" y="152" class="subtitle">Curated SaaS Platforms, EHS Software &amp; Open-Source Tools</text>
 
-    <!-- Pill Tags -->
-    <g transform="translate(240, 185)">
-      <!-- Pill 1 -->
-      <rect x="0" y="0" width="150" height="34" rx="17" fill="#334155" stroke="#475569" stroke-width="1"/>
-      <text x="18" y="22" class="badge-text">🦺 Site Safety</text>
+  <!-- Pill Badges -->
+  <g transform="translate(240, 185)">
+    <rect x="0" y="0" width="130" height="32" rx="16" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="18" y="21" class="badge-text">Site Safety</text>
 
-      <!-- Pill 2 -->
-      <rect x="162" y="0" width="165" height="34" rx="17" fill="#334155" stroke="#475569" stroke-width="1"/>
-      <text x="180" y="22" class="badge-text">⚠️ Hazard Tracking</text>
+    <rect x="142" y="0" width="155" height="32" rx="16" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="160" y="21" class="badge-text">Hazard Tracking</text>
 
-      <!-- Pill 3 -->
-      <rect x="339" y="0" width="160" height="34" rx="17" fill="#334155" stroke="#475569" stroke-width="1"/>
-      <text x="357" y="22" class="badge-text">📋 OSHA & CAPA</text>
+    <rect x="309" y="0" width="145" height="32" rx="16" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="327" y="21" class="badge-text">OSHA &amp; CAPA</text>
 
-      <!-- Pill 4 -->
-      <rect x="511" y="0" width="170" height="34" rx="17" fill="#334155" stroke="#475569" stroke-width="1"/>
-      <text x="529" y="22" class="badge-text">🌐 Open Source EHS</text>
-    </g>
+    <rect x="466" y="0" width="160" height="32" rx="16" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <text x="484" y="21" class="badge-text">Open Source EHS</text>
   </g>
 </svg>
